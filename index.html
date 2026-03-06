@@ -736,7 +736,7 @@ function rResumen(){
       <div class="est-total" style="background:var(--surface2);border-radius:8px;padding:10px;border:1px solid var(--border);grid-column:span 2"><div style="font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase">Total del mes</div><div class="mono" style="font-size:14px;font-weight:700">${fmtV(tg)}</div></div>
     </div>`;
 
-  document.getElementById('r-cot').innerHTML=`<div style="display:grid;gap:10px">
+  const rcot=document.getElementById('r-cot');if(rcot)document.getElementById('r-cot').innerHTML=`<div style="display:grid;gap:10px">
     <div class="cot-usd" style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--yl);border-radius:8px">
       <span style="font-size:11px;font-weight:600;color:#854d0e;text-transform:uppercase" class="cot-lbl">USD Oficial</span>
       <div style="display:flex;align-items:center;gap:8px"><span class="mono" style="font-size:17px;font-weight:700;color:var(--yellow)">${fmtV(S.usd)}</span><button class="btn bs btn-sm" onclick="openM('m-usd')">✏️</button></div>
